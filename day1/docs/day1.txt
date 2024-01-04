@@ -1,0 +1,29 @@
+Ambientes virtuais e instalação de bibliotecas em Python
+
+- O que é o Pip?
+- O que é venv?
+
+
+Pip
+-------------
+Pip significa "Pip install packages" e é uma ferramenta para instalação de pacotes e bibliotecas no Python.
+Ao escrever o seguinte comando em seu shell:
+
+$ pip install httpx
+
+O pip vai até o PyPI (um mega banco de dados contendo todos os pacotes e bibliotecas) faz o download, 
+extrai e joga em uma pasta chamada site-packages.
+
+Sempre que você faz a instalação de algum pacote de maneira global (como acima) esse pacote e suas dependências são direcionadas ao site-packages.
+
+O lado ruim de fazer isso são os conflitos de versão de dependência que são gerados. Pois uma vez que você instalou o httpx, 
+também foram instaladas diversas outras libs (dependências). Depois da instalação de alguns pacotes, a chance de gerar algum erro é grande.
+
+Por esse motivo existe o venv.
+
+Venv
+-------------
+Venv significa "Virtual env". Basicamente, você cria um escopo local para instalação das dependências. 
+Ou seja, no momento da criação de um venv, são criadas algumas pastas e configurações (lib/bin/include) e
+dentro da pasta lib existe o site-packages daquele venv específico. Dessa forma, a instalação dos pacotes ocorre
+de maneira local, evitando os conflitos de dependências.
