@@ -27,3 +27,20 @@ Venv significa "Virtual env". Basicamente, você cria um escopo local para insta
 Ou seja, no momento da criação de um venv, são criadas algumas pastas e configurações (lib/bin/include) e
 dentro da pasta lib existe o site-packages daquele venv específico. Dessa forma, a instalação dos pacotes ocorre
 de maneira local, evitando os conflitos de dependências.
+
+
+Requirements.txt
+______________________
+Vamos supor que algum colega precisará rodar o projeto que você criou na máquina dele.
+Ele precisará saber quais são as dependências necessárias para rodar esse projeto.
+O arquivo Requirements.txt determina as dependências necessárias e também pode determinar as versões dessas dependências
+Exemplo:
+
+#Requirements.txt
+
+httpx == 1.1
+pandas >= 1.0
+
+Dessa forma, qualquer pessoa que verificar esse arquivo conseguirá entender quais são os pacotes de instalação necessários.
+Além disso, existem convenções de alguns outros arquivos (constraints.txt,requirements_dev.txt) que funcionam de maneira semelhante.
+
