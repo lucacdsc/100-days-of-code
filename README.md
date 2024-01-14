@@ -1,5 +1,5 @@
 # 100 days of code
 
-Criei esse projeto com o intuito de desenvolver uma constẫncia e disciplina em programar ou estudar sobre programação todos os dias nem que seja um pouquinho.
+Iniciei essa saga com o objetivo de me dedicar mais aos estudos de programação e buscar desenvolver uma constância maior nos estudos.
 
-Eu espero que no fim dos 100 dias eu consiga manter meu GitHub verdinho :D
+Espero que ao fim dos 100 dias eu ainda consiga manter o GitHub verdinho =D
