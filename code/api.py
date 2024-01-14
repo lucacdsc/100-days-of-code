@@ -1,3 +1,4 @@
+from typing import Optional
 from flask import Flask,request,jsonify
 from flask_pydantic_spec import FlaskPydanticSpec,Request,Response
 from pydantic import BaseModel
@@ -9,15 +10,25 @@ spec.register(server_app)
 database = TinyDB('database.json')
 
 class Pessoa(BaseModel):
-    id: int
+    id: Optional[int]
     nome: str
     idade: int
 
+class Pessoas(BaseModel):
+    pessoas: list[Pessoa]
+    count: int
+
+
 @server_app.get('/pessoas')
-@spec.validate(resp=Response(HTTP_200=Pessoa))
-def pegar_algo():
+@spec.validate(resp= Response(HTTP_200=Pessoas))
+def buscar_pessoas():
     """Retorna todas as pessoas da base de dados."""
-    return jsonify(database.all())
+    return jsonify(
+        Pessoas(
+            pessoas=database.all(),
+            count=len(database.all())
+            ).dict()
+    )
 
 @server_app.post('/pessoas')
 @spec.validate(
@@ -28,5 +39,15 @@ def inserir_pessoa():
     body = request.context.body.dict()
     database.insert(body)
     return body
+
+@server_app.put('/pessoas/<int:id>')
+@spec.validate(
+    body=Request(Pessoa), resp=Response(HTTP_200=Pessoa)
+)
+def altera_pessoa(id):
+    Pessoa = Query()
+    body = request.context.body.dict()
+    database.update(body, Pessoa.id == id)
+    return jsonify(body)
 
 server_app.run()
