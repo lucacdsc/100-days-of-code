@@ -1,0 +1,28 @@
+Uma API (Application Programming Interface) é um conjunto de definições e protocolos
+usados no desenvolvimento e na integração de aplicações.
+
+- - - - - 
+
+Vamos esmiuçar isso:
+
+É uma comunicação entre um cliente (você mesmo) e outro computador ou outra pessoa.
+É feita uma requisição de algo, e esse servidor ou outra pessoa te responde.
+
+Basicamente, uma api é um contrato de como os dados serão enviados e quais respostas vamos obter
+quando um dado específico for solicitado.
+
+- - - - -
+E o que é REST?
+REST (Representational State Transfer) é um conjunto de "regras" e limitações
+para que a API não seja complexa demais.
+
+Naturalmente, o que pedimos a uma API é o seu estado [state] e ela necessários
+retorna uma representação [representational] dele em uma transferência [transfer] de dados.
+
+- - - - - 
+Como dizer o que eu quero? (Verbos)
+
+Sempre que queremos pegar alguma coisa, ou melhor
+-- Hey, me dá uma coisa aí!
+
+Utilizamos o método GET
