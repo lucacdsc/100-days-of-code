@@ -1,0 +1,40 @@
+STRING INICIAL:
+
+f'{string.upper()=!r:*:ˆ15}'
+
+O que será que essa string faz?
+
+Roteiro:
+- 1. Tipos de formatação
+- 2. Entendendo o format
+- 3. Uma mini linguagem
+- 4. Alguns exemplos legais
+
+
+| 1.
+-------
+Dá para formatar de quais maneiras?
+Existem 3 formas básicas para formatação de strings:
+
+|'%s' %  |
+|.format |     
+|f'      |
+----------
+
+|2.
+-------
+
+Como funciona o lado esquerdo?
+    '{}'.format('teste')
+
+O espaço vazio funciona como uma espécie de template para o que virá no lado direito, como argumento da função format.
+Dessa forma, podemos dizer que o espaço vazio é preenchido com os argumentos da função format.
+
+Com o .format() nós também conseguimos nomear o espaço vazio e assim, garantir maior legibilidade em nosso código.
+
+    '{nome}'.format(nome='Luca')
+
+
+Com o f'{}' nós conseguimos fazer a utilização de alguns métodos:
+    f'{nome.upper()}'
+Já com o format nós não conseguimos esse comportamento.
