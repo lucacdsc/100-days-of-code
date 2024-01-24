@@ -38,3 +38,16 @@ Com o .format() nós também conseguimos nomear o espaço vazio e assim, garanti
 Com o f'{}' nós conseguimos fazer a utilização de alguns métodos:
     f'{nome.upper()}'
 Já com o format nós não conseguimos esse comportamento.
+
+|3.
+------
+Mini linguagem
+
+Tudo que faz parte da mini linguagem ocorre após os :
+
+Exemplo:
+
+    nome = 'Luca'
+    f'{nome:preenchimento|orientação|tamanho}'
+
+Podemos definir o preenchimento que a nossa string terá, se estará orientada a direita, esquerda ou centro e o tamanho dela também.
