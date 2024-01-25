@@ -26,3 +26,11 @@ for nome,idade in zip(nomes,idades):
 
 gatinho =  'Chiclete'
 print(f'{gatinho:*^10}')
+
+#Números
+print(f'{15:b}') #binário
+print(f'{15:o}') #octal
+print(f'{15:d}') #decimal
+print(f'{15:x}') #hexadecimal
+print(f'{15:X}') #v hexadecimal maiúsculo
+
